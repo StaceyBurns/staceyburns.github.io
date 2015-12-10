@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<style>
+#mytable {
+
+}
+
+#container {
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+}
+#addtaskwrapper {
+	margin-top: 3%;
+}
+tr {
+	margin-left: 10px;
+}
+th {
+	text-align: center;
+}
+
+
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body>
+
+<div id="container">
+        <div class="input-group-lg" id="addtaskwrapper">
+            <h1>Task Manager</h1>
+            <p> Description</p>
+            <input type="text" id="description">
+            <p>Priority</p>
+            <select id="priority">
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+            </select>
+            <p>Date</p>
+            <input type="date" id="date">
+                <button class="btn-primary" id="addTable">Add</button>
+        </div>
+        <br>
+
+
+        <div id="tablewrapper">
+            <table border="1" cellpadding="2" class="table-condensed" id="mytable">
+                <tr class="h3">
+                    <th id="sortid">Task ID</th>
+                    <th id="sortdesc"><b>Description</b></th>
+                  <th id="sortpriority"><span class="glyphicon glyphicon-sort"></span></th>
+                  <th id="sortdate"><b>Due</b</th>
+                    <th><span class="glyphicon glyphicon-remove"></span></th>
+                </tr>
+          </table>
+
+  </div>
+
+
+
+</div>
+
+
+
+<script>
+        var keyinput = "taskLS";
+        window.onload = function() {
+            if (typeof(window.localStorage) != "undefined") {
+                if (localStorage.getItem("taskLS") != null) {
+
+                    tasks = JSON.parse(localStorage.getItem("taskLS"));
+                    createTable();
+                }
+            }
+        }
+        var id = 1;
+        var tasks = new Array();
+        document.getElementById("addTable").onclick = function() {
+            var myDescription = document.getElementById("description");
+            var myPriority = document.getElementById("priority");
+            var myDate = document.getElementById("date");
+            var table = document.getElementById("myTable");
+            var myID = id++;
+            var task = new Object();
+            task.TaskID = myID;
+            task.Description = myDescription.value;
+            task.Priority = myPriority.value;
+            task.DueDate = myDate.value;
+            task.DeleteRow = "Delete"
+            tasks.push(task);
+
+            createTable()
+
+        }
+        document.getElementById("sortid").onclick = function() {
+            tasks.sort(sortByID)
+
+            function sortByID(a, b) {
+                return a.TaskID - b.TaskID;
+            }
+            createTable();
+        }
+        document.getElementById("sortpriority").onclick = function() {
+            tasks.sort(function(a, b) {
+                return a.Priority - b.Priority;
+            })
+            createTable();
+        }
+        document.getElementById("sortdesc").onclick = function() {
+            tasks.sort(function(a, b) {
+                var descA = a.Description.toLowerCase();
+                var descB = b.Description.toLowerCase();
+                if (descA > descB)
+                    return -1;
+                if (descA < descB)
+                    return 1;
+                else {
+                    return 0;
+                }
+            })
+            createTable();
+        }
+        document.getElementById("sortdate").onclick = function() {
+            tasks.sort(function(a, b) {
+                return new Date(a.DueDate) - new Date(b.DueDate);
+            })
+            createTable();
+        }
+
+        function deleteRow(delbutton) {
+            var index = delbutton.parentNode.parentNode.rowIndex;
+            var table = document.getElementById("mytable");
+            table.deleteRow(index);
+            tasks.splice(index, 1)
+        }
+
+        function createTable() {
+            var table = document.getElementById("mytable");
+            for (var j = document.getElementById("mytable").rows.length; j > 1; j--) {
+                document.getElementById("mytable").deleteRow(j - 1);
+            }
+            for (var i = 0; i < tasks.length; i++) {
+                var row = table.insertRow(1);
+                var cell1 = row.insertCell(0).innerHTML = tasks[i].TaskID;
+                var cell2 = row.insertCell(1).innerHTML = tasks[i].Description;
+                var cell3 = row.insertCell(2).innerHTML = tasks[i].Priority;
+                var cell4 = row.insertCell(3).innerHTML = tasks[i].DueDate;
+                var cell5 = row.insertCell(4).innerHTML = '<span class="glyphicon glyphicon-trash" id ="tasks[i].TaskID" onClick="Javacsript:deleteRow(this)"></span>';
+
+                if (typeof(window.localStorage) != "undefined") {
+                    window.localStorage.setItem(keyinput, JSON.stringify(tasks));
+                } else {
+                    alert("window.localStorage not defined");
+                }
+
+
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
