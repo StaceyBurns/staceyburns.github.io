@@ -1,0 +1,87 @@
+@charset "utf-8";
+.galleryFilter a { 
+    margin-right: 10px; 
+    color:#666;
+    text-decoration:none;
+}
+ 
+.galleryFilter a.current { 
+    font-weight:bold;
+}
+ 
+img {
+	margin: 5px;
+	width: 100%;
+}
+ 
+.isotope-item {
+    z-index: 2;
+}
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+ 
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
+.grid-item {
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  padding: 10px;
+  background: #888;
+  color: #262524;
+}
+
+.grid-item > * {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background-color: #262626;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+}
+/*h1 {
+  font-size: 16px;
+  width: 300px;
+  color: #838484;
+  font-weight: 300;
+  text-align: center;*/
+  span {
+    color: #89c540;
+  }
+  strong {
+    color: #fff;
+  }
+#logodiv {
+  background-color: #88ce02;
+  position: absolute;
+  left: 50%;
+  height: 250px;
+  z-index: 1;
+}
+.galleryContainer img {
+
+width: 250px;
+height: 200px}
