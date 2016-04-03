@@ -2,6 +2,10 @@
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
 /* Mobile */
+#logo {
+  width: 350px;
+  height: 115px;
+}
 .galleryContainer img {
 width: 100px;
 height: 75px;
@@ -14,6 +18,7 @@ height: 75px;
 width: 120px;
 height: 90px;
 }
+
 
 }
 @media only screen  and (min-width : 1224px) {
