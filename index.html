@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -25,10 +26,13 @@
 <script src="js/fullPage/jquery.fullPage.min.js"></script>
 <link rel="stylesheet" type="text/css" href="js/fullPage/jquery.fullPage.css">
 
+<script src="js/slimScroll/jquery.slimscroll.min.js"></script>
+
 
 <script>
 	$(document).ready(function(){
 		 $('#fullpage').fullpage({
+			 scrollOverflow: true,
     sectionsColor: ['#5FCDFF', '#333D5A', '#D0D1D9', '#6AE6FF', '#79FCFF', '#55DAE8', '#29BAE8']
 	});
 	$("a[rel^='prettyPhoto']").prettyPhoto();
@@ -65,12 +69,23 @@ $(window).load(function(){
     }); 
 });
 
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75881562-1', 'auto');
+  ga('send', 'pageview');
+
 
 </script>
 
 <script>
 window.onload=function(){
 var $logoanim = $('#logodiv');
+var $datetext = $('#datetext');
+var $ht1 = $('#headtext1');
+var $ht2 = $('#headtext2');
 
 
 if($('#content').width() >= 400 && $('#content').width() <= 1920 ){
@@ -82,7 +97,23 @@ if($('#content').width() >= 400 && $('#content').width() <= 720 ){
 TweenLite.fromTo($logoanim, 5, {yPercent: -150}, {yPercent:-0, ease:Power4.easeInOut});
 TweenLite.to($logoanim, 3, {left: 0, x: 0, yPercent:-84, scale: 0.05, delay: 4});
 }
+TweenLite.to($datetext, 1, {scale: 1.3, delay: 6});
+TweenLite.to($datetext, 1, {scale: 0.8, delay: 7});
+TweenLite.to($datetext, 1, {scale: 1.3, delay: 8});
+TweenLite.to($datetext, 1, {scale: 0.8, delay: 9});
+TweenLite.to($datetext, 1, {scale: 1, delay: 10});
+
+TweenLite.to($ht1, 0, {opacity: 0});
+TweenLite.to($ht1, 3, {opacity: 1, delay: 0.5});
+
+TweenLite.to($ht2, 0, {opacity: 0});
+TweenLite.to($ht2, 5, {opacity: 1, delay: 3});
 };
+$(function(){
+    $('#galleryContainer').slimScroll({
+        height: '100%'
+    });
+});
 </script>
 
 
@@ -102,6 +133,10 @@ TweenLite.to($logoanim, 3, {left: 0, x: 0, yPercent:-84, scale: 0.05, delay: 4})
 <div id="logodiv">
  <img src="submissions/p_and_p_header_new.png"" alt="" id="logo""/>
  </div>
+  <h1 id="headtext1">MULTIMEDIA SHOWCASE</h1>
+<h1 id="headtext2">LIT CLONMEL</h1>
+<br>
+<h2 id=datetext>6pm - Wednesday 27nd May 2016</h2>
  </div>
 <div id="gallery" class="section">
 <div class="galleryFilter">
@@ -114,6 +149,7 @@ TweenLite.to($logoanim, 3, {left: 0, x: 0, yPercent:-84, scale: 0.05, delay: 4})
     <a href="#" data-filter=".filter-games">Games</a>
     <a href="#" data-filter=".filter-design">Graphic Design</a>
     <a href="#" data-filter=".filter-photography">Photography</a>
+    <br>
  
 </div>
  
@@ -162,22 +198,19 @@ TweenLite.to($logoanim, 3, {left: 0, x: 0, yPercent:-84, scale: 0.05, delay: 4})
 </div>
 
 <div class=".grid-item filter-video">
-<a href="http://www.youtube.com/watch?v=0Yzqj701sJ8" rel="prettyPhoto[video]" title=""><img src="submissions/youtube1.jpg" alt="YouTube" width="60" /></a>
+<a href="http://www.youtube.com/watch?v=0Yzqj701sJ8" rel="prettyPhoto[video]" title=""><img src="submissions/youtube1.jpg" alt="YouTube" /></a>
 </div>
 
 <div class=".grid-item filter-video">
-<a href="http://vimeo.com/151397154" rel="prettyPhoto[video]" title=""><img src="submissions/vimeo1.jpg" alt="Vimeo" width="60" /></a>
+<a href="http://vimeo.com/151397154" rel="prettyPhoto[video]" title=""><img src="submissions/vimeo1.jpg" alt="Vimeo" /></a>
 </div>
 
 </div>
 </div>
 
  <div id="welcome" class="section">
- <h1>MULTIMEDIA SHOWCASE</h1>
-<h1>LIT CLONMEL</h1>
-<br>
-<h2>6pm - Wednesday 27nd May 2016</h2>
-<img src="submissions/litl_ogo.png" width="324" height="127" alt=""/> </div>
+
+<img src="submissions/litl_ogo.png" alt=""/> </div>
 <div id="sponsors" class="section"></div>
     <div id="about" class="section">
     <p>LSAD - Clonmel showcases the talents of its students each year with an exhibition. The exhibition allows students to celebrate their creative talents, while showcasing them to the public. Each year the exhibition is organised by Creative Multimedia students, who are responsible for promoting and organising the exhibition. In the past the event has been known as Digital Expressions, the name has been changed to Pen & Pixel. It was felt that this new name better reflected the creative process of designing and then creating a piece of work. This year a particular emphasis has been placed on showcasing both digital and analog work, spanning the entire range of the multimedia sector. From photography to animation, from video to audio and everything in between. This year’s event will be taking place on the 27th of May at 6.00pm with all welcome.</p>

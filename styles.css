@@ -1,19 +1,46 @@
 @charset "utf-8";
-.galleryFilter a { 
-    margin-right: 10px; 
-    color:#666;
-    text-decoration:none;
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+/* Mobile */
+.galleryContainer img {
+width: 100px;
+height: 75px;
+}
+
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Tablet */
+.galleryContainer img {
+width: 120px;
+height: 90px;
+}
+
+}
+@media only screen  and (min-width : 1224px) {
+/* Desktops & Laptops */
+.galleryContainer img {
+width: 200px;
+height: 150px;
+}
+}
+
+@media only screen  and (min-width : 1824px) {
+/* Large Screens */
+.galleryContainer img {
+width: 200px;
+height: 150px;
+}
+}
+.galleryFilter a {
+	margin-right: 10px;
+	text-decoration: none;
+	font-size: 30px;
 }
  
 .galleryFilter a.current { 
     font-weight:bold;
 }
- 
-img {
-	margin: 5px;
-	width: 100%;
-}
- 
+
 .isotope-item {
     z-index: 2;
 }
@@ -22,9 +49,7 @@ img {
     z-index: 1;
 }
 .isotope,
-.isotope .isotope-item {
-  /* change duration value to whatever you like */
- 
+.isotope .isotope-item { 
     -webkit-transition-duration: 0.8s;
     -moz-transition-duration: 0.8s;
     transition-duration: 0.8s;
@@ -75,13 +100,11 @@ body {
     color: #fff;
   }
 #logodiv {
-  background-color: #88ce02;
   position: absolute;
   left: 50%;
   height: 250px;
   z-index: 1;
 }
 .galleryContainer img {
-
-width: 250px;
-height: 200px}
+margin: 15px;
+}
