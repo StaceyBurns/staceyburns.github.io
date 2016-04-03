@@ -1,15 +1,14 @@
 @charset "utf-8";
-#top {
-	text-align: center;
-}
-#top h1 h2 {
-	text-align: center;
-	margin-top: 30%;
-}
+
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
 /* Mobile */
+#logo {
+  width: 350px;
+  height: 115px;
+}
+
 .galleryContainer img {
 width: 100px;
 height: 75px;
@@ -21,10 +20,6 @@ height: 75px;
 .galleryContainer img {
 width: 120px;
 height: 90px;
-}
-#logo {
-  width: 350px;
-  height: 115px;
 }
 
 }
@@ -118,4 +113,11 @@ body {
 .galleryContainer img {
 	margin: 15px;
 	text-align: center;
+}
+#top {
+	text-align: center;
+}
+#top h1 h2 {
+	text-align: center;
+	margin-top: 30%;
 }
