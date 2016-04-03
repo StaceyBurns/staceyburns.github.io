@@ -1,4 +1,8 @@
 @charset "utf-8";
+#sponsors {
+	text-align: center;
+}
+
 
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -7,6 +11,10 @@
 #logo {
   width: 350px;
   height: 115px;
+}
+#sponsor {
+  width: 150px;
+  height: 150px;
 }
 
 .galleryContainer img {
@@ -17,6 +25,10 @@ height: 75px;
 }
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 /* Tablet */
+#sponsor {
+  width: 250px;
+  height: 250px;
+}
 .galleryContainer img {
 width: 120px;
 height: 90px;
@@ -120,4 +132,8 @@ body {
 #top h1 h2 {
 	text-align: center;
 	margin-top: 30%;
+}
+.galleryContainer{
+	margin-left: 5%;
+	margin-right: 5%;
 }
