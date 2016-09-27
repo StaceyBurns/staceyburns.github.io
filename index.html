@@ -2,30 +2,70 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Stacey Burns</title>
-<link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.min.css" />
+
+<title>Stacey Burns - Multimedia Designer</title>
+<meta name="keywords" content="Stacey Burns, Web design, 3d graphics , 3d modelling, Cork, Multimedia, Digital media, Photoshop, Freelance, Portfolio">
+<link rel="shortcut icon" href="images/sblogo.png">
+
+
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="js/diamonds.js/src/diamonds.css" />
 <link href="styles.css" rel="stylesheet" type="text/css">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
+
+
 <body>
+<div id="container">
+<header>
+  <img src="images/sblogo.png" alt="" width="323" height="321" id="sblogo"/> 
+  <h1> Stacey Burns </h1>
+  <nav>
+  	<ul>
+  		<li><h2><a href= "#contact">WORK</a><h2></li>
+ 		<li><h2><a href= "#contact">ABOUT</a></h2></li>
+  		<li><h2><a href= "#contact">CONTACT</a></h2></li>
+ 	 </ul>
+  </nav>
+</header>
 
 
 
-use fixed width container for diamonds
+<div id= "work">
 <div class="diamondswrap">
     <a href="#" class="item">
-    <img src="images/car diamond1.png" width="297" height="297" alt=""/> </a>
+    <img src="images/3d-car.jpg" width=300" height="300" alt=""/> </a>
     <a href="#" class="item">
-<img src="images/car diamond2.png" width="297" height="297" alt=""/> </a>
-    </a>
+<img src="images/ph-carvaggio.jpg" width="300" height=300" alt=""/> </a>
+
+   <a href="#" class="item">
+    <img src="images/3d-clock.jpg" width="300" height="300" alt=""/> </a>
+
+        <a href="#" class="item">
+    <img src="images/video-lazing.jpg" width="300" height="300" alt=""/> </a>
+    
     <a href="#" class="item">
-<img src="images/car diamond3.png" width="297" height="297" alt=""/> </a>
-    </a>
-    ... many more items!
-    http://mqchen.github.io/jquery.diamonds.js/
+<img src="images/video-thedrive.jpg" width="300" height="300" alt=""/> </a>
+
+    <a href="#" class="item">
+<img src="images/video-cinematography.jpg" width="300" height="300" alt=""/> </a>
+
+        <a href="#" class="item">
+    <img src="images/game-robot.jpg" width="300" height="300" alt=""/> </a>
+   
+    <a href="#" class="item">
+<img src="images/gd-taking.jpg" width="297" height="297" alt=""/> </a>
+ 
+    <a href="#" class="item">
+<img src="images/ph-kegs.jpg" width="297" height="297" alt=""/> </a>
+
+
+ </div>
+ 
 </div>
 
 
@@ -33,17 +73,75 @@ use fixed width container for diamonds
 
 
 
+
+
+
+
+
+
+
+
+<div id="social">
+
+
+<div id="socialmedialiks">
+<ol>
+<li><a href="https://ie.linkedin.com/" target="new"><i class="fa fa-linkedin-square fa-4x"></i></a></li>
+<li><a href="https://www.facebook.com/stacey.burns3" target="new"><i class="fa fa-facebook-square fa-4x"></i></a></li>
+<li><a href="https://www.pinterest.com/stceburns/" target="new"><i class="fa fa-twitter-square fa-4x"></i></a></li>
+</ol>
+</div> <!-----------socialmedialinks---------->
+
+</div> <!-----------social----------->
+
+
+
+
+
+
+<div id="about">
+<h3><span id="aboutsec">ABOUT ME</span></h3>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.  </p> 
+
+</div> <!--About-->
+
+
+
+
+<div id="contact">
+
+<h3><span id="contactsec">GET IN TOUCH</span></h3>
+
+
+<form action="MAILTO:stceburns@gmail.com" method="post" enctype="text/plain">
+<p> EMAIL</p>
+<input type="text" name="mail "size="35">
+<p>MESSAGE</p>
+<input type="text" name="name" size="35">
+<br>
+<br>
+<input type="submit" value="Send">
+</form>
+
+
+</div> <!--Contact-->
+
+
+<footer>
+<h4>Stacey Burns &copy;</h4>
+</footer>
+
+
+</div> <!-------container------->
 <script src="js/jquery-3.1.0.min.js"></script>
-<script type="text/javascript" src="js/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/diamonds.js/src/jquery.diamonds.js"></script>
 <script>
 $(document).ready(function() {
 		$(".diamondswrap").diamonds({
-    	size: 250, // Size of the squares
-   		gap: 1 // Pixels between squares
+    	size: 300, // Size of the squares
+   		gap: 5 // Pixels between squares
 });
 });
 </script>
-
 </body>
 </html>
