@@ -87,12 +87,12 @@ nav li {
 	width: 30%;
 }
 #contact {
-	height: 290px;
+	height: 350px;
 }
 label {
 	display: block;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 input {
 	border-radius: 4px;
