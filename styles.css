@@ -21,7 +21,7 @@ h3 {
 }
 header {
 	height: 95px;
-	width: auto;
+	width: 100%;
 	max-width: 1920px;
 	background-color: #0BD9C4;
 	border-bottom: 10px solid #b0b0b0;
