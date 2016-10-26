@@ -9,9 +9,11 @@
 
 
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleap
+is.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="js/diamonds.js/src/diamonds.css" />
+
 <link href="styles.css" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,8 +23,7 @@
 
 <body>
 <div id="container">
-<header>
-  <img src="images/sblogo.png" alt="" width="323" height="321" id="sblogo"/> 
+<header> <a href="index.html"><img src="images/sblogo.png" alt="" width="323" height="321" id="sblogo"/></a> 
   <h1> Stacey Burns </h1>
   <nav>
   	<ul>
@@ -39,13 +40,13 @@
 <div class="diamondswrap">
     <a href="#" class="item">
     <img src="images/3d-car.jpg" width=300" height="300" alt=""/> </a>
-    <a href="#" class="item">
+    <a href="photography.html" class="item">
 <img src="images/ph-carvaggio.jpg" width="300" height=300" alt=""/> </a>
 
    <a href="#" class="item">
     <img src="images/3d-clock.jpg" width="300" height="300" alt=""/> </a>
 
-        <a href="#" class="item">
+        <a href="kinetictext.html" class="item">
     <img src="images/video-lazing.jpg" width="300" height="300" alt=""/> </a>
     
     <a href="#" class="item">
@@ -60,8 +61,9 @@
     <a href="#" class="item">
 <img src="images/gd-taking.jpg" width="297" height="297" alt=""/> </a>
  
-    <a href="#" class="item">
+    <a href="photography.html" class="item">
 <img src="images/ph-kegs.jpg" width="297" height="297" alt=""/> </a>
+
 
 
  </div>
@@ -99,11 +101,11 @@
 
 
 
-<div id="about">
+<!--<div id="about">
 <h3><span id="aboutsec">ABOUT ME</span></h3>
 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.  </p> 
 
-</div> <!--About-->
+</div>--> <!--About-->
 
 
 
@@ -137,13 +139,58 @@
 </div> <!-------container------->
 <script src="js/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="js/diamonds.js/src/jquery.diamonds.js"></script>
+
 <script>
 $(document).ready(function() {
 		$(".diamondswrap").diamonds({
     	size: 300, // Size of the squares
    		gap: 5 // Pixels between squares
+	});
+
 });
+
+
+/*$(window).scroll(function () { 
+
+		$("header").addClass("headerScroll");
+	
+});*/
+
+/*$(document).ready(function() {
+	if ( $(window).width() > 820) {      
+  $(".diamondswrap").diamonds({
+    	size: 300, // Size of the squares
+   		gap: 5 // Pixels between squares
+	});
+} 
+else {
+  $(".diamondswrap").diamonds({
+    	size: 200, // Size of the squares
+   		gap: 5 // Pixels between squares
+	});
+}
+	
+		
+
 });
+
+window.addEventListener('resize', function(event){
+  if ( $(window).width() > 820) {      
+  $(".diamondswrap").diamonds({
+    	size: 300, // Size of the squares
+   		gap: 5 // Pixels between squares
+		
+	});
+} 
+  if ( $(window).width() < 819) {      
+  $(".diamondswrap").diamonds({
+    	size: 200, // Size of the squares
+   		gap: 5 // Pixels between squares
+		
+	});
+} 
+});*/
+
 </script>
 </body>
 </html>
